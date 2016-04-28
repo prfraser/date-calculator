@@ -1,0 +1,19 @@
+<h1>Date Calculator</h1><br>
+
+<form action='/' type='post' class="form-inline">
+  <div class="form-group">
+    <label for="startdate1">Start Date:</label>
+    <input type="date" class="form-control" id="startdate1"  name='startdate'>
+  </div>
+  <div class="form-group">
+    <label for="numdays1">Number of Days:</label>
+    <input type="number" class="form-control" id="numdays1" name='numdays'>
+  </div>
+  <button type="submit" class="btn btn-default" value='Submit'>Submit</button>
+</form><br>
+
+<p>Counting: <%= params[:numdays] %> days. </p>
+<p>From: <%= params[:startdate] %></p>
+<p><%= params[:numdays] %> days from <%= params[:startdate] %> is <%= @result[:end_time] %></p>
+<p><%= params[:numdays] %> business days from <%= params[:startdate] %> is <%= @result[:end_time_b] %></p>
+
